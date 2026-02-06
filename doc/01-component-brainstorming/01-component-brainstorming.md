@@ -1,12 +1,10 @@
 # Portfolio Part 1: Component Brainstorming
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
-- **Due Date**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
+- **Name**: Maggie Cook
+- **Dot Number**: cook.2319
+- **Due Date**: 2/6 @ 1:50 PM EST
 
 ## Assignment Overview
-
-<!-- TODO: read the assignment overview then delete this comment -->
 
 The overall goal of the portfolio project is to have you design and implement
 your own OSU component. There are no limits to what you choose to design and
@@ -29,8 +27,6 @@ implement.
 
 ## Assignment Checklist
 
-<!-- TODO: browse the checklist then delete this comment -->
-
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
 opening the TODOs window from the sidebar. The icon looks like a tree and will
@@ -52,8 +48,6 @@ to the tree diagram (you may remove this one as well):
 
 ## Assignment Learning Objectives
 
-<!-- TODO: read the assignment learning objectives then delete this comment -->
-
 Without learning objectives, there really is no clear reason why a particular
 assessment or activity exists. Therefore, to be completely transparent, here is
 what we're hoping you will learn through this particular aspect of the portfolio
@@ -66,8 +60,6 @@ project. Specifically, students should be able to:
    discipline
 
 ## Assignment Rubric: 10 Points
-
-<!-- TODO: read the assignment rubric then delete this comment -->
 
 Again, to be completely transparent, most of the portfolio project, except the
 final submission, is designed as a formative assessment. Formative assessments
@@ -106,23 +98,15 @@ Below is further rationale/explanation for the rubric items above:
 > brainstorming. Plus it helps us get to know you better! Feel free to share
 > images in this section.
 
-<!-- TODO: briefly talk about your interests then delete this comment.
-Also, protip: you can preview what your response looks like by hitting
-the magnifying glass icon in the upper-right corner or pressing CTRL+K and
-then V. This kind of button combination is called a chord, for whatever
-reason -->
+At the moment, I am considering going into software engineering, game developement, or education in my post-college career. Some of my personal hobbies include playing the baritone horn in band, playing golf with my dad, and playing video games. I also like to read Stephen King books and Spider-man comics. I enjoy watching the Blue Jackets and Ohio State football, basketball, and hockey teams. My current favorite tv series is Invincible.
 
 ## Assignment
-
-<!-- TODO: read the assignment section then delete this comment -->
 
 As previously stated, you are tasked with brainstorming 3 possible components.
 To aid you in this process, we have provided [some example components][example-components]
 that may help you in your brainstorming. All of these components were made at
 some point by one of your peers, so you should feel confident that you can
 accomplish any of them.
-
-<!-- TODO: browse the list of possible projects then delete this comment -->
 
 There is no requirement that you use any of the components listed above.
 If you want to model something else, go for it! Very common early object
@@ -142,8 +126,6 @@ list-like components that have different ways of manipulating the data. Think
 about different ways you might allow a client to manipulate your component.
 
 ### Example Component
-
-<!-- TODO: review this example component then delete this comment -->
 
 To help you brainstorm a few components, we've provided an example below of a
 component you already know well: NaturalNumber. We highly recommend that you
@@ -211,68 +193,81 @@ will likely refine your design to make your implementation easier to use.
 
 > Please use this section to share your designs.
 
-- Component Design #1: <!-- TODO: give component a name then delete this comment -->
+- Component Design #1: Scale
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - Holds information about a particular musical scale, such as its name and mode.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - void setName(String n): sets the scale's name to n
+    - void setMode(String m): sets the scale's mode to m
+    - void addSharps(String[] arr): sets key signature to include sharps coordinating with letters in a string array
+    - void addFlats(String[] arr): sets key signature to include flats coordinating with letters in a string array
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - String getName(): returns the scale's name as a string
+    - String getMode(): returns the scale's mode as a string
+    - String[] arr getKeySig(): returns the key signature, specifying which notes are either flat or sharp
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, as stated earlier, basically all OSU components have to be mutable as long as they inherit from Standard.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - No. All methods work with arrays, string, and ints.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I don't know.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - No, none of the secondary methods can use "get" methods in kernel.
 
-- Component Design #2: <!-- TODO: give component a name then delete this comment -->
+- Component Design #2: Recipe Book
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - Models the organization of recipes in a book.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - void addRecipe(String n, String s, String i): adds a recipe to the book with name n, supplies s, and instructions i
+    - String[] arr removeRecipe(int i): removes and returns recipe details of the recipe at index i
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - void addCategory(String c): adds a category recipes can fit into, named c
+    - void recipeToCategory(String r, String c): organizes the recipe r (if found) into category c (if found)
+    - String recipeToString(String r): returns a recipe r (if found) in a nicely formatted string
+    - String displayRecipeBook(): displays a nicely formatted string of the list of categries and their respective recipes in the recipe book
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, as stated earlier, basically all OSU components have to be mutable as long as they inherit from Standard.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - It could, for example a key could be the recipe name, and the value could hold recipe information.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - No, I don't see how this would be helpful.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I don't know.
 
-- Component Design #3: <!-- TODO: give component a name then delete this comment -->
+- Component Design #3: Instrument Distributor
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - Models the distribution of instruments to band members.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - void addInstrument(String i): adds an instrument with name i to a storage list
+    - void addPlayer(String n): adds a band member with name n
+    - void assignInstrument(String i, String n): assigns instrument with name i (if found) to the player with name n (if found)
+    - void returnInstrument(String i, String n): returns instrument i from player n and puts it in storage
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - String findInstrument(String i): returns either if instrument is in storage or the name of the player who currently holds the instrument (if found)
+    - String toString(): returns nicely formatted list of where all instruments are located
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, as stated earlier, basically all OSU components have to be mutable as long as they inherit from Standard.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - It could, for example a map could contain a key (player's name) and map it to a value (list of instrumentds they currently hold).
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - No, don't see how this would apply.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I don't know.
 
 ## Post-Assignment
 
@@ -280,8 +275,6 @@ The following sections detail everything that you should do once you've
 completed the assignment.
 
 ### Changelog
-
-<!-- TODO: create CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
