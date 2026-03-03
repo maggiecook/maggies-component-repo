@@ -201,10 +201,11 @@ will likely refine your design to make your implementation easier to use.
     - void setMode(String m): sets the scale's mode to m
     - void addSharps(String[] arr): sets key signature to include sharps coordinating with letters in a string array
     - void addFlats(String[] arr): sets key signature to include flats coordinating with letters in a string array
-  - **Secondary Methods**:
     - String getName(): returns the scale's name as a string
     - String getMode(): returns the scale's mode as a string
+  - **Secondary Methods**:
     - String[] arr getKeySig(): returns the key signature, specifying which notes are either flat or sharp
+    - String genre(): returns the typical genre usage of the scale
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
@@ -225,9 +226,8 @@ will likely refine your design to make your implementation easier to use.
   - **Kernel Methods**:
     - void addRecipe(String n, String s, String i): adds a recipe to the book with name n, supplies s, and instructions i
     - String[] arr removeRecipe(int i): removes and returns recipe details of the recipe at index i
+    - int bookLength(): returns the number of recipes in the book
   - **Secondary Methods**:
-    - void addCategory(String c): adds a category recipes can fit into, named c
-    - void recipeToCategory(String r, String c): organizes the recipe r (if found) into category c (if found)
     - String recipeToString(String r): returns a recipe r (if found) in a nicely formatted string
     - String displayRecipeBook(): displays a nicely formatted string of the list of categries and their respective recipes in the recipe book
   - **Additional Considerations** (*note*: "I don't know" is an acceptable

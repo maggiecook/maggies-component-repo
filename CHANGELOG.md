@@ -13,3 +13,13 @@ the following form: YYYY.0M.0D.
 - Designed a Scale component
 - Designed a Recipe Book component
 - Designed a Instrument Distributor component
+
+## 2026.02.26
+
+### Added
+
+- Designed a proof of concept for Instrument Distributor component
+
+### Updated
+
+- Changed design to include methods that get the available space and check the condition of a specified instrument
